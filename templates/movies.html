@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+</head>
+
+<body>
+    <header>
+        <h1>My Movie Recommendations!</h1>
+        <p>By Antonio Cavanaugh Lillo</p>
+
+        <h2>Genres</h2>
+        <nav>
+            <ul>
+                {% for genre in genres %}
+                    <li><a href="/movies/{{ genre }}">{{ genre }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Movie List</h2>
+        <ul>
+            {% block content %}
+                {% for movie in movies %}
+                    <li>{{ movie }}</li>
+                {% endfor %}
+            {% endblock %}
+        </ul>
+    </main>
+    <footer>
+        <p><small>Hope you enjoyed!</small></p>
+    </footer>
+</body>
+</html>
