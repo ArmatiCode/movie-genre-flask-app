@@ -8,11 +8,11 @@ app = Flask(__name__)
 def home():
     return render_template('movies.html')
 
-#Base route - Will display all movies and genres
+#Base page, will display all movies. 
 @app.route('/movies')
 def movies():
     genres = movieList.keys()
-    allMovies = [movie for movies in movieList.values() for movie in movies] #Flattens. Jesus
+    allMovies = [movie for movies in movieList.values() for movie in movies] #Flattens the sublists in dict. Ayaiai.
     return render_template('movies.html', genres=genres, movies=allMovies)
 
 
@@ -24,7 +24,7 @@ def movies_via_genre(genre):
         movies_Genre = movieList[genre] #Will return the list of movies in that genre
         return render_template('genre.html', genre=genre, movies=movies_Genre) #passes movies as list not dict
     else:
-        return "Oops! No movies found for that genre!"
+        return "Oops! No movies found for that genre!", 404
 
 
 if __name__ == '__main__':

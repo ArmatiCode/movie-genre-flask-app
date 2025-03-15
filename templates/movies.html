@@ -6,32 +6,30 @@
     <title>Movie Recommendations</title>
 </head>
 
-<body>
+<body style="text-align: center;">
     <header>
         <h1>My Movie Recommendations!</h1>
-        <p>By Antonio Cavanaugh Lillo</p>
+        <p style="font-style: italic;">By Antonio Cavanaugh Lillo</p>
 
         <h2>Genres</h2>
-        <nav>
-            <ul>
-                {% for genre in genres %}
-                    <li><a href="/movies/{{ genre }}">{{ genre }}</a></li>
-                {% endfor %}
-            </ul>
+        <nav style="padding: 20px; border-bottom: 1px solid black; padding-bottom: 20px;">
+            {% for genre in genres %}
+                <a style="padding: 10px; font-style: italic" href="/movies/{{ genre }}">{{ genre }}</a>
+            {% endfor %}
         </nav>
     </header>
     <main>
         <h2>Movie List</h2>
-        <ul>
-            {% block content %}
-                {% for movie in movies %}
-                    <li>{{ movie }}</li>
-                {% endfor %}
-            {% endblock %}
-        </ul>
+        
+        {% block content %}
+            {% for movie in movies %}
+                <p style="padding: 10px; margin-bottom: 20px; font-style: italic;">{{ movie }}</p>
+            {% endfor %}
+        {% endblock %}
     </main>
-    <footer>
-        <p><small>Hope you enjoyed!</small></p>
+    <footer style="margin-top: 20px; color: red">
+        <p style="font-style: italic;"><small>Disclaimer: I haven't watched all of these! So no promises lol</small></p>
+        <p style="font-style: normal;"><a href="/movies">Return to top</a></li></p>
     </footer>
 </body>
 </html>

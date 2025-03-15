@@ -6,23 +6,21 @@
     <title>{{ genre }} Movies</title>
 </head>
 
-<body>
+<body style="text-align: center;">
     <header>
-        <h1>{{ genre }} Movies!</h1>
+        <h1 style="font-style:italic; padding-bottom: 30px;">{{ genre }} Movies!</h1>
     </header>
     <main>
-        <h2>Movie List</h2>
-        <ul>
-            {% block content %}
+        <h3>Movie List</h3>
+        {% block content %}
                 {% for movie in movies %}
-                    <li>{{ movie }}</li>
+                    <p style="padding: 10px; margin-bottom: 20px; font-style: italic;">{{ movie }}</p>
                 {% endfor %}
-            {% endblock %}
-        </ul>
+        {% endblock %}
     </main>
-    <footer>
+    <footer style="margin-top: 20px; color: red; font-weight: bold;">
         <p><small>Don't forget popcorn!</small></p>
-        <p><a href="/movies">Home</a></li></p>
+        <p style="font-style: normal;"><a href="/movies">All movies</a></li></p>
     </footer>
 </body>
 </html>
