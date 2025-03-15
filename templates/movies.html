@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title &}MOVIE RECCOMENDATION APP{% endblock %}</title>
+    <title>{% block title %} MOVIE RECOMMENDATION BY GENRE{% endblock %}</title>
 </head>
 
 <body>
@@ -11,18 +11,18 @@
         <h1>Genres</h1>
         <nav>
             <ul>
-                <a href="/movies/Comedy">Comedy</a>
-                <a href="/movies/Documentary">Documentary</a>
-                <a href="/movies/Cult">Cult</a>
-                <a href="/movies/Horror">Horror</a>
-                <a href="/movies/Romance">Romance</a>
+                <li><a href="/movies/Comedy">Comedy</a></li>
+                <li><a href="/movies/Documentary">Documentary</a></li>
+                <li><a href="/movies/Cult">Cult</a></li>
+                <li><a href="/movies/Horror">Horror</a></li>
+                <li><a href="/movies/Romance">Romance</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h2>Movie List</h2>
         <ul>
-            {% blockcontent %}
+            {% block content %}
                 <li>
                     <p>placeholder</p>
                     <p>placeholder</p>
@@ -30,11 +30,11 @@
                     <p>placeholder</p>
                     <p>placeholder</p>
                 </li>
-            {% blockcontent %}
+            {% endblock %}
         </ul>
     </main>
     <footer>
-        <p> Hope you enjoyed!</p>
+        <p><small>Hope you enjoyed!</small></p>
     </footer>
 </body>
 </html>
