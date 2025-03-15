@@ -1,0 +1,15 @@
+{% extends 'movies.html' %}
+
+{% block title %} Movies in the catagory: {{ genre }} {% endblock %}
+
+{% block content %}
+    <h2>Movie List</h2>
+    <ol>
+        {% for movie in movies %}
+                <li> {{ movie }} </li>
+        {% endfor %}
+    </ol>
+    <p></p>
+    <p> <a href="/movies">Back to all movies</a> </p>
+{% endblock %}
+
