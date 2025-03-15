@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title &}MOVIE RECCOMENDATION APP{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>Genres</h1>
+        <nav>
+            <ul>
+                <a href="/movies/Comedy">Comedy</a>
+                <a href="/movies/Documentary">Documentary</a>
+                <a href="/movies/Cult">Cult</a>
+                <a href="/movies/Horror">Horror</a>
+                <a href="/movies/Romance">Romance</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Movie List</h2>
+        <ul>
+            {% blockcontent %}
+                <li>
+                    <p>placeholder</p>
+                    <p>placeholder</p>
+                    <p>placeholder</p>
+                    <p>placeholder</p>
+                    <p>placeholder</p>
+                </li>
+            {% blockcontent %}
+        </ul>
+    </main>
+    <footer>
+        <p> Hope you enjoyed!</p>
+    </footer>
+</body>
+</html>
