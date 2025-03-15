@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Movie Recommendations!</title>
+    <title>Movie Recommendations</title>
 </head>
 
 <body>
     <header>
-        <h1>Genres</h1>
+        <h1>My Movie Recommendations!</h1>
+        <p>By Antonio Cavanaugh Lillo</p>
+
+        <h2>Genres</h2>
         <nav>
             <ul>
                 {% for genre in genres %}
@@ -18,7 +21,7 @@
         </nav>
     </header>
     <main>
-        <h1>Movie List</h1>
+        <h2>Movie List</h2>
         <ul>
             {% block content %}
                 {% for movie in movies %}

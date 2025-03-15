@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter dynamic title here</title>
+    <title>{{ genre }} Movies</title>
 </head>
 
 <body>
     <header>
-        <h1>Genres</h1>
-        <nav>
-            <ul>
-                {% for genre in genres %}
-                    <li><a href="/movies/{{ genre }}">{{ genre }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>
+        <h1>{{ genre }} Movies!</h1>
     </header>
     <main>
-        <h1>Movie List in this genre #make dynmanic</h1>
+        <h2>Movie List</h2>
         <ul>
             {% block content %}
                 {% for movie in movies %}
@@ -28,7 +21,8 @@
         </ul>
     </main>
     <footer>
-        <p><small>Hope you enjoyed!</small></p>
+        <p><small>Don't forget popcorn!</small></p>
+        <p><a href="/movies">Home</a></li></p>
     </footer>
 </body>
 </html>
