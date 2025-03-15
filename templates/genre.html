@@ -1,15 +1,34 @@
-{% extends 'movies.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter dynamic title here</title>
+</head>
 
-{% block title %} Movies in the catagory: {{ genre }} {% endblock %}
-
-{% block content %}
-    <h2>Movie List</h2>
-    <ol>
-        {% for movie in movies %}
-                <li> {{ movie }} </li>
-        {% endfor %}
-    </ol>
-    <p></p>
-    <p> <a href="/movies">Back to all movies</a> </p>
-{% endblock %}
-
+<body>
+    <header>
+        <h1>Genres</h1>
+        <nav>
+            <ul>
+                {% for genre in genres %}
+                    <li><a href="/movies/{{ genre }}">{{ genre }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Movie List in this genre #make dynmanic</h1>
+        <ul>
+            {% block content %}
+                {% for movie in movies %}
+                    <li>{{ movie }}</li>
+                {% endfor %}
+            {% endblock %}
+        </ul>
+    </main>
+    <footer>
+        <p><small>Hope you enjoyed!</small></p>
+    </footer>
+</body>
+</html>

@@ -11,7 +11,9 @@ def home():
 #Base route - Will display all movies and genres
 @app.route('/movies')
 def movies():
-    return render_template('movies.html', genres=movieList.values())
+    genres = movieList.keys()
+    allMovies = [movie for movies in movieList.values() for movie in movies] #Flattens. Jesus
+    return render_template('movies.html', genres=genres, movies=allMovies)
 
 
 #Route to display movies only in a specific genre
