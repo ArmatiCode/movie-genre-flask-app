@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+</head>
+
+<body style="text-align: center;">
+    <header>
+        <h1>My Movie Recommendations!</h1>
+        <p style="font-style: italic;">By Antonio Cavanaugh Lillo</p>
+
+        <h2>Genres</h2>
+        <nav style="padding: 20px; border-bottom: 1px solid black; padding-bottom: 20px;">
+            {% for genre in genres %}
+                <a style="padding: 10px; font-style: italic" href="/movies/{{ genre }}">{{ genre }}</a>
+            {% endfor %}
+        </nav>
+    </header>
+    <main>
+        <h2>Movie List</h2>
+        
+        {% block content %}
+            {% for movie in movies %}
+                <p style="padding: 10px; margin-bottom: 20px; font-style: italic;">{{ movie }}</p>
+            {% endfor %}
+        {% endblock %}
+    </main>
+    <footer style="margin-top: 20px; color: red">
+        <p style="font-style: italic;"><small>Disclaimer: I haven't watched all of these! So no promises lol</small></p>
+        <p style="font-style: normal;"><a href="/movies">Return to top</a></li></p>
+    </footer>
+</body>
+</html>

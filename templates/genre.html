@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ genre }} Movies</title>
+</head>
+
+<body style="text-align: center;">
+    <header>
+        <h1 style="font-style:italic; padding-bottom: 30px;">{{ genre }} Movies!</h1>
+    </header>
+    <main>
+        <h3>Movie List</h3>
+        {% block content %}
+                {% for movie in movies %}
+                    <p style="padding: 10px; margin-bottom: 20px; font-style: italic;">{{ movie }}</p>
+                {% endfor %}
+        {% endblock %}
+    </main>
+    <footer style="margin-top: 20px; color: red; font-weight: bold;">
+        <p><small>Don't forget popcorn!</small></p>
+        <p style="font-style: normal;"><a href="/movies">All movies</a></li></p>
+    </footer>
+</body>
+</html>
