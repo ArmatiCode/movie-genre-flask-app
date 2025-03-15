@@ -6,7 +6,9 @@ app = Flask(__name__)
 #Redirect homepage
 @app.route('/')
 def home():
-    return render_template('movies.html')
+    genres = movieList.keys()
+    allMovies = [movie for movies in movieList.values() for movie in movies] #Flattens the sublists in dict. Ayaiai.
+    return render_template('movies.html', genres=genres, movies=allMovies)
 
 #Base page, will display all movies. 
 @app.route('/movies')
