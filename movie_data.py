@@ -1,6 +1,6 @@
 #List of movies and their respective keys (Genre as key, movie as valu)
-movieList = {'Comedy': ['Funny1', 'Funny2', 'Funny3'],
-             'Horror': ['Scary1', 'Scary2', 'Scary3'],
-             'Romance': ['Love1', 'Love2', 'Love3'],
-             'Cult Classic': ['Cult1', 'Cult2', 'Cult3'],
-             'Documentary': ['Doc1', 'Doc2', 'Doc3']}
+movieList = {'Comedy': ['Monty Python and The Holy Grail', 'The Nice Guys', 'Hot Rod'],
+             'Horror': ['The Shining', 'Hereditary', 'The Evil Dead'],
+             'Romance': ['La La Land', 'The Big Sick', 'When Harry Met Sally'],
+             'Cult': ['Tampopo', 'The Big Lebowski', 'Taxi Driver'],
+             'Documentary': ['My Octopus Teacher', 'Everst', 'The Arbor']}
